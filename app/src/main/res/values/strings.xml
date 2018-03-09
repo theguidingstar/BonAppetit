@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Bon Appetit</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="enter_your_e_mail_account">Email Account</string>
+    <string name="password">Password</string>
+    <string name="Name">Full Name</string>
+    <string name="number">Mobile Number</string>
+    <string name="Description_of_room">A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality mattress in a small room to large suites with bigger, higher-quality beds, a dresser, a fridge and other kitchen facilities, upholstered chairs, a flatscreen television and en-suite bathrooms</string>
+    <string name="navigation_drawer_open">Navigation Open</string>
+    <string name="navigation_drawer_close">Navigation Close</string>
+    <string name="title_activity_main__navigation_activity">Home</string>
+    <string name="action_settings">Settings</string>
+    <string name="rest_desc">Our Restaurant was founded by the Culver family in 1984, which eventually branched out to more than 300 franchised restaurants all over the US. Culver’s is well-known for its ButterBurger, which made the restaurant extremely famous. They also have other items which include salads, sandwiches, desserts, etc.</string>
+</resources>

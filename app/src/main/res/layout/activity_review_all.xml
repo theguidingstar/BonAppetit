@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yashshah.bonappetit.review_all"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBarOverlay"
+        android:id="@+id/AppBarLayout1"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_review_all"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/PopupOverlay"
+            android:background="#d15151"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center|start"
+        android:layout_below="@+id/AppBarLayout1"
+        android:background="@android:color/white"
+        android:id="@+id/HotelName_Linear_Layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Hotel Name"
+            android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/Review_Page_hotel_Name"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/HotelName_Linear_Layout"
+        android:background="#d15151"></LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="51dp"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/LinearLayout_review"
+        android:weightSum="1"
+
+        android:layout_below="@+id/AppBarLayout1">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".49"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Review >"
+            android:textStyle="bold"
+            android:textColor="#d15151"
+            android:textSize="17dp"
+            android:id="@+id/Total_Review"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".005"
+            android:background="#d15151"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".49">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Average Rating "
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="#d15151"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5/5"
+                        android:textStyle="bold"
+                        android:textSize="17dp"
+                        android:textColor="#d15151"
+                        android:id="@+id/Average_rating"
+                        android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/LinearLayout_review"
+        android:background="#d15151"></LinearLayout>
+
+    <ListView
+        android:id="@+id/Listview_review"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/white"
+        android:layout_below="@id/LinearLayout_review">
+
+    </ListView>
+
+</RelativeLayout>

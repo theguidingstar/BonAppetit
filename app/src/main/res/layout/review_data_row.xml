@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/UserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name"
+        android:textSize="17sp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/Review_data"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:id="@+id/StarRatingLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rectangle">
+        <TextView
+            android:id="@+id/starRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+            android:textColor="@android:color/white"
+        android:textSize="17sp"
+
+        />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_star"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Review_title"
+        android:text="Review Title"
+        android:textSize="20sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_alignTop="@+id/StarRatingLayout"
+        android:layout_toEndOf="@+id/StarRatingLayout" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:minLines="2"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:id="@+id/Review_data"
+        android:text="@string/Description_of_room"
+        android:layout_below="@+id/StarRatingLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Review_data"
+        android:layout_alignTop="@+id/UserName"
+        android:text="By"
+        android:textSize="17sp"/>
+</RelativeLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yashshah.bonappetit.Login"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:id="@+id/Linear_layout_login">
+
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewFlipper"
+        android:layout_centerInParent="true"
+
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            android:id="@+id/LoginViewFlipper"
+            android:layout_marginBottom="20dp"
+            >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/bonappetit"
+                android:layout_gravity="center_horizontal"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/Login_editText_email_textInputlayout">
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_your_e_mail_account"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/Login_editText_email"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    tools:layout_editor_absoluteY="125dp"
+                    tools:layout_editor_absoluteX="0dp"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/Linear_editTextPassword">
+
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:hint="@string/password"
+                        android:id="@+id/editTextPassword_login"
+                        android:layout_marginTop="10dp"
+                        android:imeOptions="actionGo"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/roundbutton"
+                android:padding="10dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/login_forgot_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ForgetPasswordLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="20dp"
+                    android:text="Forget Password?"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:id="@+id/SignUpTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:padding="10dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:id="@+id/SignupViewFlipper">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/bonappetit"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/texInputLayout_sign_up_name">
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Name"
+                    android:inputType="text"
+                    android:id="@+id/Sign_up_Name"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/texInputLayout_sign_up_number">
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/number"
+                    android:inputType="number"
+                    android:id="@+id/Sign_up_Number"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/texInputLayout_sign_up_email">
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/enter_your_e_mail_account"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/Sign_up_EMail"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/texInputLayout_sign_up_Password">
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:id="@+id/Sign_up_Password"
+                    android:imeOptions="actionGo"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonSignup"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Sign up"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/roundbutton"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forget Password?"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/ForgetPasswordSignUp"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:id="@+id/loginTextView"
+                    android:padding="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        </ScrollView>
+    </ViewFlipper>
+
+
+
+</RelativeLayout>

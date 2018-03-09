@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:background="@android:color/white">
+
+
+    <ImageView
+        android:id="@+id/imageView_Hotel"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:focusable="false"
+        android:scaleType="fitXY"
+        android:focusableInTouchMode="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hotel Name"
+        android:textSize="20sp"
+        android:id="@+id/textView_hotel_name"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignTop="@+id/imageView_Hotel"
+        android:layout_toEndOf="@+id/imageView_Hotel"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Navrangpura, Ahmedabad,
+Gujarat"
+        android:focusable="false"
+        android:layout_marginTop="5dp"
+        android:focusableInTouchMode="false"
+        android:layout_alignStart="@id/textView_hotel_name"
+        android:layout_below="@id/textView_hotel_name"
+        android:id="@+id/textView3"
+        android:gravity=""/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:text="Open Now"
+        android:layout_marginTop="5dp"
+        android:id="@+id/Open_Close"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_alignStart="@id/textView_hotel_name" />
+
+    <TextView
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView_Hotel"
+        android:layout_alignTop="@+id/imageView_Hotel"
+        android:text="3.5"
+        android:maxLength="3"
+        android:textColor="@android:color/white"
+        android:focusable="false"
+        android:padding="2dp"
+        android:background="@drawable/onside_rounded_rectangle"
+        android:focusableInTouchMode="false"
+         />
+
+</RelativeLayout>

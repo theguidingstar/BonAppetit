@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/relativelayout_cardview_fav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/Hotel_image_Cardview_fav"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/contact_image" />
+
+            <TextView
+                android:id="@+id/CardView_hotel_Name_fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Hotel_image_Cardview_fav"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="2"
+                android:minLines="2"
+                android:singleLine="false"
+                android:text="Hotel Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/radioButton_cardView_fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/Hotel_image_Cardview_fav"
+                android:layout_alignTop="@+id/Hotel_image_Cardview_fav"
+                android:background="@drawable/onside_rounded_rectangle"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="2"
+                android:textColor="@android:color/white"
+                android:padding="2dp"
+                android:maxLength="3"
+                android:text="3.5" />
+
+            <TextView
+                android:id="@+id/CardView_address_fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/CardView_hotel_Name_fav"
+                android:layout_below="@id/CardView_hotel_Name_fav"
+                android:layout_marginTop="5dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:minLines="2"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:text="Navrangpura, Ahmedabad,
+Gujarat" />
+
+
+            <TextView
+                android:id="@+id/Open_Close_cardView_fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/CardView_address_fav"
+                android:layout_below="@id/CardView_address_fav"
+                android:layout_marginTop="5dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Open"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_marginBottom="5dp"/>
+
+            <ImageView
+                android:id="@+id/imageView_fav"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="3dp"
+                android:layout_alignBottom="@+id/Open_Close_cardView_fav"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="11dp"
+                android:background="@drawable/shape_round_strokeonly"
+                app:srcCompat="@drawable/ic_favdone"
+                android:clickable="true"
+                android:focusableInTouchMode="true"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

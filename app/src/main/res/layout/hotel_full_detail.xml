@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bebebe">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBarOverlay"
+        android:id="@+id/AppBarLayout1"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/PopupOverlay"
+            android:background="#d15151"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.nirhart.parallaxscroll.views.ParallaxScrollView
+        android:id="@+id/parallax_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#bebebe"
+        android:layout_below="@id/AppBarLayout1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#bebebe"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:id="@+id/header_image_layout"
+                android:background="#bebebe">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:focusable="false"
+                    android:background="@android:color/transparent"
+                    android:onClick="fullImageView">
+
+
+
+                    <ImageView
+                        android:id="@+id/Hotel_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="fitXY"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1/4"
+                        android:padding="5dp"
+                        android:background="@android:color/white"
+                        android:alpha=".50"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="170dp"
+                        android:textColor="@android:color/black"/>
+
+                    <ImageView
+                        android:id="@+id/imageView_Share"
+                        android:layout_width="37dp"
+                        android:layout_height="39dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_share"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:background="@drawable/shape_round"
+                        android:onClick="displayShareDetail" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="200dp"
+                        android:background="@android:color/white">
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="180dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3.5"
+                        android:maxLength="3"
+                        android:padding="10dp"
+                        android:textSize="15dp"
+                        android:background="@drawable/rounded_rectangle"
+                        android:id="@+id/Rating_full_detail"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@android:color/white"
+                        />
+
+                    </RelativeLayout>
+                </FrameLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativelayout_hotel_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_image_layout"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/Hotel_Name_hotel_full_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Hotel Name"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:padding="10dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/Hotel_address_hotel_full_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Hotel_Name_hotel_full_detail"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="101dp"
+                    android:text="Hotel Address"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/Hotel_address_hotel_full_detail"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#808080"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:id="@+id/Linear_underAddress"
+                    />
+
+
+                <TextView
+                    android:id="@+id/buttonAvailable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#d15151"
+                    android:text="Open Now"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/Linear_underAddress"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/Opening_hours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="Mon- Sun 11:00 A.M to 11 P.M"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/buttonAvailable"
+                    android:layout_marginTop="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/Opening_hours"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#808080"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:id="@+id/Linear_underTiming"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/Linear_underTiming"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight=".33"
+                        android:padding="15dp"
+                        android:id="@+id/Call_now"
+                        android:src="@drawable/ic_phone"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight=".33"
+                        android:padding="8dp"
+                        android:id="@+id/Review"
+                        android:src="@drawable/ic_review"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight=".33"
+                        android:padding="5dp"
+                        android:id="@+id/Favourite"
+                        android:src="@drawable/ic_fav"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:orientation="vertical"
+                android:background="#bebebe"
+                android:id="@+id/relativelayout_hotel_detail1"
+                android:layout_below="@+id/relativelayout_hotel_detail"></LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativelayout_hotel_detail1"
+                android:background="@android:color/white"
+                >
+
+                <TextView
+                    android:id="@+id/Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Description"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/Desc_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/Description"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/rest_desc"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/Desc_data"
+                    android:id="@+id/ExtraDesc">
+
+                <TextView
+                    android:id="@+id/Cusines"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/Desc_data"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Cusines"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chinese"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/Cusine_data"
+                    android:layout_below="@id/Cusines"/>
+
+                <TextView
+
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/Cusine_data"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Average Cost"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/AverageCostForTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="500 For 2 (Approx)"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignStart="@id/Cusines"
+                    android:layout_below="@id/AverageCostForTwo"/>
+
+                    <TextView
+                        android:id="@+id/More_Info"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@id/Cusine_data"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="More Info"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/home_delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hone Delivery"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignStart="@id/Cusines"
+                        android:layout_below="@id/AverageCostForTwo"/>
+                    <TextView
+                        android:id="@+id/Vegan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vegetarian"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignStart="@id/Cusines"
+                        android:layout_below="@id/AverageCostForTwo"/>
+                    <TextView
+                        android:id="@+id/Parking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Parking Available"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignStart="@id/Cusines"
+                        android:layout_below="@id/AverageCostForTwo"/>
+                    <TextView
+                        android:id="@+id/wifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wi-Fi"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignStart="@id/Cusines"
+                        android:layout_below="@id/AverageCostForTwo"/>
+
+                    <TextView
+                        android:id="@+id/jain_food"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jain Food"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignStart="@id/Cusines"
+                        android:layout_below="@id/AverageCostForTwo"/>
+
+                    <TextView
+                        android:id="@+id/cardaccepted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Card Accepted"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignStart="@id/Cusines"
+                        android:layout_below="@id/AverageCostForTwo"/>
+
+                    <TextView
+                        android:id="@+id/WalletAccepted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wallet Accepted"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignStart="@id/Cusines"
+                        android:layout_below="@id/AverageCostForTwo"/>
+
+                    <TextView
+                        android:id="@+id/Address_of_resturant"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@id/Cusine_data"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Address"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/Complete_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Inder Residency, Opposite Gujarat College, Ellis Bridge, Ahmedabad"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_alignStart="@id/Cusines"
+                        android:layout_below="@id/AverageCostForTwo"/>
+
+                    <LinearLayout
+                        android:id="@+id/getDirection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginRight="80dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:weightSum="1"
+                        android:background="@drawable/rectangle_stroke_only"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight=".20"
+                            android:padding="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/ic_address" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_weight=".80"
+                            android:paddingLeft="5dp"
+                            android:background="@android:color/transparent"
+                            android:text="Get Directions"
+                            android:textColor="#d15151"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:orientation="vertical"
+                        android:background="#bebebe"
+                        android:layout_below="@+id/relativelayout_hotel_detail"></LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/UserReviews"
+                        android:padding="5dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/StarRatingLayout"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="5dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/rounded_rectangle_star">
+                            <TextView
+                                android:id="@+id/starRating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4"
+                                android:textColor="@android:color/white"
+                                android:textSize="17sp"
+
+                                />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_star"
+                                />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Review"
+                            android:textSize="15sp"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#d15151"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/Review_arrow"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="from 1 Review"
+                            android:textSize="15dp"
+                            android:id="@+id/total_review_full_detail_page"
+                            android:textColor="#d15151"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/StarRatingLayout" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="3dp"
+                            android:id="@+id/Review_arrow"
+                            android:src="@drawable/ic_direction"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:orientation="vertical"
+                        android:background="#bebebe"
+                        android:layout_below="@+id/relativelayout_hotel_detail"></LinearLayout>
+                </LinearLayout>
+
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/ExtraDesc">
+                    </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </com.nirhart.parallaxscroll.views.ParallaxScrollView>
+    <Button
+        android:id="@+id/bookMyRoom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#d15151"
+        android:layout_alignParentBottom="true"
+        android:text="Book a Table"
+        android:textColor="@android:color/white">
+    </Button>
+
+</RelativeLayout>
